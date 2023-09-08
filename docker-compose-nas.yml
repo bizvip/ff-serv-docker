@@ -8,9 +8,6 @@ services:
     environment:
       - "TIMEZONE=Asia/Shanghai"
     restart: always
-    networks:
-      app_net:
-        ipv4_address: 172.10.12.100
     ports:
       - "8080:80"
     volumes:
