@@ -31,11 +31,11 @@ services:
       - ./phpcli/conf.d/docker-php-ext-opcache.ini:/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
       - ./phpcli/conf.d/docker-php-ext-swoole.ini:/usr/local/etc/php/conf.d/docker-php-ext-swoole.ini
     ports:
-      - "9501:9501"
-      - "9502:9502"
+      - "8081:8001"
+      - "8082:8002"
     networks:
       app_net:
-    command: [ "php","bin/dev","start" ]
+    command: [ "php","/data/service/ff-service/bin/dev","start" ]
     depends_on:
       - redis
       - rabbitmq
