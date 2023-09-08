@@ -35,7 +35,7 @@ services:
       - "8082:8002"
     networks:
       app_net:
-    command: [ "php","/data/service/ff-service/bin/dev","start" ]
+    command: [ "php","bin/dev","start" ]
     depends_on:
       - redis
       - rabbitmq
