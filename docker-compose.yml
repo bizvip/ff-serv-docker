@@ -1,19 +1,19 @@
 version: "3.9"
 
 services:
-  nginx:
-    build:
-      context: .
-    image: nginx:1.23.3
-    environment:
-      - "TIMEZONE=Asia/Shanghai"
-    restart: always
-    ports:
-      - "8000:80"
-    volumes:
-      - ${WEB_ROOT}:/webroot/
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf.d/:/etc/nginx/conf.d/
+#  nginx:
+#    build:
+#      context: .
+#    image: nginx:1.23.3
+#    environment:
+#      - "TIMEZONE=Asia/Shanghai"
+#    restart: always
+#    ports:
+#      - "8000:80"
+#    volumes:
+#      - ${WEB_ROOT}:/webroot/
+#      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+#      - ./nginx/conf.d/:/etc/nginx/conf.d/
 
   # serv:
   #   image: php_cli:8.2.10
