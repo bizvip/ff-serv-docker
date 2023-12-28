@@ -69,7 +69,7 @@ services:
       MYSQL_MAX_CONNECTIONS: 200
     user: root
     ports:
-      - "35003:3306"
+      - "3306:3306"
   #    networks:
   #      app_net:
   #        ipv4_address: 172.255.255.188
@@ -161,8 +161,8 @@ services:
     volumes:
       - ./data/es-data:/usr/share/elasticsearch/data
     ports:
-      - "35004:9200"
-      - "35005:9300"
+      - "9200:9200"
+      - "9300:9300"
     networks:
       app_net:
 
@@ -171,7 +171,7 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     ports:
-      - "35008:5601"
+      - "5601:5601"
     depends_on:
       - elasticsearch
     networks:
